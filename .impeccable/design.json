@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-07-21T00:00:00.000Z",
+  "title": "Design System: Pranav Darga — Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "cobalt": {
+        "role": "primary",
+        "displayName": "Cobalt",
+        "canonical": "#1456f0",
+        "tonalRamp": ["#0a1f66", "#0c3fb8", "#1456f0", "#3f74f3", "#6b93f6", "#97b2f9", "#c3d1fc", "#e9eefe"]
+      },
+      "cobalt-deep": {
+        "role": "primary-hover",
+        "displayName": "Cobalt Deep",
+        "canonical": "#0c3fb8",
+        "tonalRamp": ["#071f5c", "#092e86", "#0c3fb8", "#1a56d6", "#4674e0", "#7396ea", "#a1b8f2", "#d0dbf9"]
+      },
+      "midnight": {
+        "role": "neutral-dark",
+        "displayName": "Midnight",
+        "canonical": "#0a2540",
+        "tonalRamp": ["#050f1a", "#081a2e", "#0a2540", "#1c4066", "#3a5f88", "#6684a6", "#9cb2c6", "#d4dee6"]
+      },
+      "ink": {
+        "role": "text",
+        "displayName": "Ink",
+        "canonical": "#1a1a1a",
+        "tonalRamp": ["#000000", "#0d0d0d", "#1a1a1a", "#3d3d3d", "#616161", "#8a8a8a", "#b8b8b8", "#e5e5e5"]
+      },
+      "slate": {
+        "role": "text-secondary",
+        "displayName": "Slate",
+        "canonical": "#5a6472",
+        "tonalRamp": ["#20242a", "#3a414a", "#5a6472", "#767f8c", "#94a0ac", "#b3bdc7", "#d1d8de", "#eef1f3"]
+      },
+      "mist": {
+        "role": "surface",
+        "displayName": "Mist",
+        "canonical": "#f5f7fb",
+        "tonalRamp": ["#c3cad9", "#d6dce6", "#e9edf3", "#f0f3f7", "#f5f7fb", "#f8fafc", "#fbfcfe", "#ffffff"]
+      },
+      "hairline": {
+        "role": "border",
+        "displayName": "Hairline",
+        "canonical": "#e3e7ee",
+        "tonalRamp": ["#a9b2c2", "#c1c9d6", "#d6dbe5", "#e3e7ee", "#eceff4", "#f2f4f7", "#f8f9fb", "#ffffff"]
+      },
+      "accent-amber": {
+        "role": "decorative",
+        "displayName": "Toned Amber",
+        "canonical": "#f97316",
+        "tonalRamp": ["#7a3406", "#a5480a", "#d15f0f", "#f97316", "#faa15c", "#fbc191", "#fddcbd", "#fef2e6"]
+      },
+      "accent-amber-light": {
+        "role": "decorative",
+        "displayName": "Toned Amber (gradient top)",
+        "canonical": "#fbbf24",
+        "tonalRamp": ["#7d5f0a", "#a87d0e", "#d4a012", "#fbbf24", "#fccc55", "#fdd985", "#fee6b3", "#fef6de"]
+      },
+      "accent-lavender": {
+        "role": "decorative",
+        "displayName": "Toned Lavender",
+        "canonical": "#c084fc",
+        "tonalRamp": ["#4c2678", "#6d38a8", "#9660d2", "#c084fc", "#d1a5fd", "#e1c3fe", "#efdcff", "#f9f0ff"]
+      },
+      "accent-lavender-deep": {
+        "role": "decorative",
+        "displayName": "Toned Lavender (gradient bottom)",
+        "canonical": "#e879a0",
+        "tonalRamp": ["#742038", "#9d2b4c", "#c94569", "#e879a0", "#eda0bc", "#f2c1d3", "#f7dce6", "#fcf0f4"]
+      },
+      "footer-muted": {
+        "role": "text-on-dark",
+        "displayName": "Footer Muted",
+        "canonical": "#b8c2d4",
+        "tonalRamp": ["#3c4655", "#576374", "#7c8898", "#b8c2d4", "#c8d0de", "#d8dee8", "#e8ecf2", "#f6f7fa"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles and the About heading." },
+      "title": { "displayName": "Title", "purpose": "Job titles (1.3rem) and project/detail titles (1.4rem)." },
+      "body": { "displayName": "Body", "purpose": "About copy, job and project descriptions." },
+      "label": { "displayName": "Label", "purpose": "Small chrome text, 0.82–0.95rem by context: job dates and nav links at 0.95rem; chips, footer links, project links, toast, and slider count at 0.82–0.9rem." }
+    },
+    "shadows": [
+      { "name": "ambient-lift", "value": "0 20px 50px rgba(10, 37, 64, 0.18)", "purpose": "Spotlight shadow for featured surfaces: hero image, photo frame, active project slide." },
+      { "name": "control-shadow", "value": "0 2px 6px rgba(10, 37, 64, 0.12)", "purpose": "Resting shadow for small circular nav controls." },
+      { "name": "floating-shadow", "value": "0 10px 30px rgba(0, 0, 0, 0.2)", "purpose": "Floating chrome: play button, toast." }
+    ],
+    "motion": [
+      { "name": "ease-reveal", "value": "0.6s cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Scroll-reveal fade + rise for sections and cards." }
+    ],
+    "breakpoints": [
+      { "name": "md", "value": "900px" },
+      { "name": "sm", "value": "640px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main call-to-action button — pill-shaped, cobalt fill.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">Explore my work</a>",
+      "css": ".ds-btn-primary { display: inline-block; padding: 14px 28px; border-radius: 999px; font-weight: 600; font-size: 0.95rem; background: var(--color-primary); color: #fff; border: 2px solid transparent; transition: transform 0.2s ease, background 0.2s ease; } .ds-btn-primary:hover, .ds-btn-primary:focus-visible { background: var(--color-primary-dark); transform: translateY(-2px); } .ds-btn-primary:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action button — transparent fill, midnight border, fills solid on hover.",
+      "html": "<a class=\"ds-btn-outline\" href=\"#\">Get in touch</a>",
+      "css": ".ds-btn-outline { display: inline-block; padding: 14px 28px; border-radius: 999px; font-weight: 600; font-size: 0.95rem; color: var(--color-dark); border: 2px solid var(--color-dark); background: transparent; transition: background 0.2s ease, color 0.2s ease; } .ds-btn-outline:hover, .ds-btn-outline:focus-visible { background: var(--color-dark); color: #fff; }"
+    },
+    {
+      "name": "Resume Link (Dark)",
+      "kind": "button",
+      "refersTo": "button-dark",
+      "description": "Signature exception to the pill shape — square-cornered, stamped-credential feel for the resume link.",
+      "html": "<a class=\"ds-btn-dark\" href=\"#\">View Resume</a>",
+      "css": ".ds-btn-dark { display: inline-block; padding: 8px 28px; border-radius: 0; font-weight: 600; font-size: 0.95rem; background: var(--color-dark); color: #fff; transition: background 0.2s ease; } .ds-btn-dark:hover, .ds-btn-dark:focus-visible { background: #000; }"
+    },
+    {
+      "name": "Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Small tech-tag pill used under job entries and project details.",
+      "html": "<li class=\"ds-chip\">TypeScript</li>",
+      "css": ".ds-chip { display: inline-block; background: #fff; border: 1px solid var(--color-border); border-radius: 999px; padding: 6px 14px; font-size: 0.82rem; font-weight: 600; color: var(--color-dark); }"
+    },
+    {
+      "name": "Job Card",
+      "kind": "card",
+      "refersTo": null,
+      "description": "Timeline entry for a work experience item — flat, bordered, mist background.",
+      "html": "<article class=\"ds-job-card\"><div class=\"ds-job-meta\">2024 — Present</div><div class=\"ds-job-body\"><h3>Job Title</h3><h4>Company Name</h4><p>Role summary and impact.</p></div></article>",
+      "css": ".ds-job-card { display: grid; grid-template-columns: 200px 1fr; gap: 32px; background: var(--color-bg-alt); border: 1px solid var(--color-border); border-radius: 14px; padding: 32px; } .ds-job-meta { font-weight: 600; color: var(--color-primary); font-size: 0.95rem; } .ds-job-body h3 { font-size: 1.3rem; font-weight: 700; margin: 0; } .ds-job-body h4 { font-size: 1rem; font-weight: 500; color: var(--color-muted); margin: 4px 0 12px; } .ds-job-body p { color: var(--color-muted); margin: 0; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Sticky translucent header with blurred backdrop and cobalt hover links.",
+      "html": "<header class=\"ds-nav\"><span class=\"ds-nav-logo\">Pranav Darga</span><nav class=\"ds-nav-links\"><a href=\"#\">Resume</a><a href=\"#\">GitHub</a><a href=\"#\">Contact</a></nav></header>",
+      "css": ".ds-nav { display: flex; align-items: center; justify-content: space-between; padding: 18px 24px; background: rgba(255, 255, 255, 0.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--color-border); } .ds-nav-logo { font-weight: 800; font-size: 1.25rem; color: var(--color-primary); } .ds-nav-links { display: flex; gap: 32px; } .ds-nav-links a { font-weight: 500; font-size: 0.95rem; color: var(--color-text); text-decoration: none; transition: color 0.2s ease; } .ds-nav-links a:hover, .ds-nav-links a:focus-visible { color: var(--color-primary); }"
+    },
+    {
+      "name": "Toast",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Transient confirmation message, pill-shaped, midnight fill, floating shadow.",
+      "html": "<div class=\"ds-toast\">Copied to clipboard</div>",
+      "css": ".ds-toast { display: inline-block; background: var(--color-dark); color: #fff; padding: 12px 24px; border-radius: 999px; font-size: 0.9rem; font-weight: 600; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Working Proof",
+    "overview": "This isn't a portfolio that describes skill — it's one that demonstrates it. Every scroll reveal, every timed transition, every pixel of a card's border-radius is itself the evidence a recruiter is evaluating, alongside the words on the page. The system reads as corporate-editorial confidence: a strong cobalt anchors action, midnight ink carries weight and authority, and everything else steps back into quiet neutrals so the craft — not the color — does the convincing.\n\nThe system explicitly rejects the generic, unmodified template look. Nothing here should feel like a free Bootstrap portfolio with the name swapped in. It also rejects gimmick for its own sake: motion and decoration earn their place only when they reinforce precision and credibility, never novelty for its own sake, per the anti-reference already set in PRODUCT.md.",
+    "keyCharacteristics": [
+      "Confident, precise, minimal — restraint reads as competence to this audience.",
+      "One accent color (cobalt) carries almost all interactive weight; midnight carries authority and structure.",
+      "Soft, ambient, navy-tinted shadows lift key surfaces (hero image, photo frame, active project slide) off a flat, mostly-white canvas.",
+      "Motion is a reveal, not a performance: content fades and rises into place once, on scroll, then gets out of the way."
+    ],
+    "rules": [
+      { "name": "The One Accent Rule", "body": "Cobalt is the only color that means \"click me.\" If a new interactive element needs a color, it's cobalt or it's midnight-on-hover — never a third hue.", "section": "colors" },
+      { "name": "The Warmth-in-Moderation Rule", "body": "The amber and lavender gradient blobs behind the About photo are the system's only departure from blue/neutral. They exist to add a trace of humanity against an otherwise corporate palette — but they are a whisper, not a shout: low opacity (~0.5), softened saturation, confined to that one moment on the page.", "section": "colors" },
+      { "name": "The Weight-Over-Size Rule", "body": "Emphasis comes from jumping to 700–800 weight, not from introducing a new font size outside the hierarchy.", "section": "typography" },
+      { "name": "The Spotlight, Not Drop-Shadow Rule", "body": "Ambient Lift is reserved for content the visitor should look at, never for structural containers like nav or footer. If everything is elevated, nothing is.", "section": "elevation" },
+      { "name": "The Sanctioned Exception Rule", "body": "Two sizes sit outside the type ramp entirely, by design, each used exactly once: the header wordmark (800, 1.25rem) and the slider's nav-arrow glyph (1.1rem). Neither is a role to reuse elsewhere.", "section": "typography" }
+    ],
+    "dos": [
+      "Do keep cobalt as the only color that signals \"actionable\" — buttons, active links, hover states.",
+      "Do use the pill shape (999px) for standard buttons and chips; reserve square corners for the one deliberate exception (the resume link).",
+      "Do reserve Ambient Lift shadows for featured content only (hero image, photo frame, active project slide) — never for structural chrome.",
+      "Do let real, verifiable proof (live project links, GitHub) carry the Projects and Experience sections, per PRODUCT.md's \"verifiable over descriptive\" principle.",
+      "Do keep the header's Contact link reachable at every scroll position — PRODUCT.md's belief ladder depends on it."
+    ],
+    "donts": [
+      "Don't let this read as a generic, unmodified template portfolio — no stock Bootstrap card grids, no default framework styling left unclaimed.",
+      "Don't add gimmicky or novelty visual effects — bouncing icons, confetti, cartoonish illustration — anything that trades credibility for cuteness with a recruiter audience.",
+      "Don't introduce a third accent hue outside cobalt/midnight for interactive elements.",
+      "Don't let the About section's decorative amber/lavender blobs grow louder than a whisper — keep opacity low and saturation soft; they're a signature detail, not a focal point.",
+      "Don't apply Ambient Lift-style shadows to everything — if every card floats, the featured surfaces stop feeling featured."
+    ]
+  }
+}

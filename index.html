@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Name — Portfolio</title>
+  <meta name="description" content="Personal portfolio of Your Name — software engineer." />
+  <link rel="icon" href="data:," />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="#top" class="logo">Pranav Darga</a>
+      <nav class="main-nav" aria-label="Primary">
+        <a href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a href="https://github.com/pranavdarga" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/pranavdarga" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:pdarga34@gmail.com">Contact</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-textbox reveal">
+          <h1>Hi, I'm Pranav Darga<br />Building Products With Code &amp; Curiosity</h1>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">Explore my work</a>
+            <a href="mailto:pdarga34@gmail.com" class="btn btn-outline">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="assets/profile-placeholder.svg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+      <div class="about-photo reveal">
+        <div class="photo-deco photo-deco--orange"></div>
+        <div class="photo-deco photo-deco--lavender"></div>
+        <div class="photo-frame">
+          <img src="assets/profile.jpg" alt="Photo of Pranav Darga" id="about-photo" />
+        </div>
+      </div>
+      <div class="about-text reveal">
+        <h2>About Me</h2>
+        <p>
+          I'm a software engineer who loves turning ideas into reliable, well-crafted products.
+          Replace this paragraph with a few sentences about your background, what you're passionate
+          about building, and what kind of problems you like to solve. Mention your current focus,
+          favorite tools or languages, and what drives you professionally.
+        </p>
+        <p>
+          Outside of work I enjoy running, cooking, and contributing to open source. I'm always
+          looking for the next interesting challenge to dig into.
+        </p>
+        <a href="assets/resume.pdf" target="_blank" rel="noopener" class="btn btn-dark">View Resume</a>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="experience" id="experience">
+      <h2 class="section-title reveal">Where I've Worked</h2>
+      <div class="timeline">
+
+        <article class="job-card reveal">
+          <div class="job-meta">
+            <span class="job-dates">Mar 2024 — Present</span>
+            <span class="job-location">Boston, MA</span>
+            <img src="assets/logos/deloitte.svg" alt="Deloitte logo" class="company-logo" />
+          </div>
+          <div class="job-body">
+            <h3>Software Engineer 2</h3>
+            <h4>Deloitte</h4>
+            <p>
+              Engineer APIs powering high-volume trading workflows for a Top 10 US Bank's Wealth Management
+              clients, supporting 10M+ daily requests at sub-100ms latency. Led the decommissioning of a
+              legacy COBOL trading pipeline for a Java/AWS architecture, cutting core API response times by
+              80% via Redis caching and provisioning infrastructure with Terraform.
+            </p>
+            <ul class="tags">
+              <li>Java</li>
+              <li>AWS</li>
+              <li>Terraform</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job-card reveal">
+          <div class="job-meta">
+            <span class="job-dates">Oct 2023 — Feb 2024</span>
+            <span class="job-location">Charlotte, NC</span>
+            <img src="assets/logos/ccm.svg" alt="CrossCountry Mortgage logo" class="company-logo" />
+          </div>
+          <div class="job-body">
+            <h3>Software Engineer 1</h3>
+            <h4>Cross Country Mortgage</h4>
+            <p>
+              Built third-party integrations (credit check, e-signature) for a loan origination platform used
+              by national clients, and implemented backend services in C# and MongoDB on AWS to support
+              scalable loan-processing workflows.
+            </p>
+            <ul class="tags">
+              <li>C#</li>
+              <li>MongoDB</li>
+              <li>AWS</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="job-card reveal">
+          <div class="job-meta">
+            <span class="job-dates">May 2022 — Jul 2022</span>
+            <span class="job-location">Dearborn, MI</span>
+            <img src="assets/logos/ford.svg" alt="Ford Motor Company logo" class="company-logo company-logo--ford" />
+          </div>
+          <div class="job-body">
+            <h3>Software Engineer Intern</h3>
+            <h4>Ford Motor Company</h4>
+            <p>
+              Built and validated mobile-compatible Angular tools for 175,000+ Ford employees, integrated
+              Dynatrace-based performance monitoring with Spring Boot, and implemented real-time desk and
+              meeting room booking logic in IBM TRIRIGA.
+            </p>
+            <ul class="tags">
+              <li>Angular</li>
+              <li>Spring Boot</li>
+              <li>Dynatrace</li>
+            </ul>
+          </div>
+        </article>
+
+        <div class="timeline-extra" id="timeline-extra">
+
+          <article class="job-card reveal">
+            <div class="job-meta">
+              <span class="job-dates">May 2021 — Jul 2021</span>
+              <span class="job-location">San Jose, CA</span>
+              <img src="assets/logos/innominds.svg" alt="Innominds logo" class="company-logo" />
+            </div>
+            <div class="job-body">
+              <h3>Software Engineer Intern</h3>
+              <h4>Innominds</h4>
+              <p>
+                Built a Python-based logistic regression model predicting disease risk from existing health
+                conditions for a patient engagement platform, improving accuracy on imbalanced healthcare
+                datasets with over- and under-sampling techniques.
+              </p>
+              <ul class="tags">
+                <li>Python</li>
+                <li>Machine Learning</li>
+                <li>Data Analytics</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="job-card reveal">
+            <div class="job-meta">
+              <span class="job-dates">May 2019 — Jul 2019</span>
+              <img src="assets/logos/ensurity.webp" alt="Ensurity Technologies logo" class="company-logo" />
+            </div>
+            <div class="job-body">
+              <h3>Software Engineer Intern</h3>
+              <h4>Ensurity Technologies</h4>
+              <p>
+                Designed a password-less authentication and encryption solution in C#, reducing reliance on
+                traditional credentials and helping mitigate a major source of cyberattack risk.
+              </p>
+              <ul class="tags">
+                <li>C#</li>
+                <li>Authentication</li>
+                <li>Security</li>
+              </ul>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+
+      <div class="view-more-wrap">
+        <button type="button" class="btn btn-outline" id="view-more-btn">View More</button>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <h2 class="section-title reveal">Projects</h2>
+
+      <div class="project-slider reveal">
+        <div class="slider-stage">
+          <button type="button" class="slide-thumb slide-thumb--side" id="thumb-prev" aria-label="Previous project"></button>
+          <div class="slide-thumb slide-thumb--active" id="thumb-current">
+            <a class="play-btn" id="current-link" href="#" target="_blank" rel="noopener" aria-label="Open live demo">&#8599;</a>
+          </div>
+          <button type="button" class="slide-thumb slide-thumb--side" id="thumb-next" aria-label="Next project"></button>
+        </div>
+
+        <div class="slider-nav">
+          <button type="button" class="nav-arrow" id="prev-btn" aria-label="Previous project">&#8249;</button>
+          <div class="slider-dots" id="slider-dots"></div>
+          <span class="slider-count"><span id="count-current">1</span> of <span id="count-total">3</span></span>
+          <button type="button" class="nav-arrow" id="next-btn" aria-label="Next project">&#8250;</button>
+        </div>
+      </div>
+
+      <div class="project-details">
+        <h3 id="detail-title"></h3>
+        <p id="detail-desc"></p>
+        <ul class="tags" id="detail-tags"></ul>
+        <div class="project-links">
+          <a id="detail-code" href="#" target="_blank" rel="noopener">Code</a>
+          <a id="detail-demo" href="#" target="_blank" rel="noopener">Live Demo</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; <span id="year"></span> Pranav Darga. Built with HTML, CSS &amp; JS.</p>
+      <div class="footer-links">
+        <a href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+        <a href="https://github.com/pranavdarga" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://linkedin.com/in/pranavdarga" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:pdarga34@gmail.com">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

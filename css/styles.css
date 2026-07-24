@@ -523,12 +523,22 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.15; }
 }
 
 .project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-weight: 600;
   font-size: 0.9rem;
   color: var(--color-primary);
 }
 
 .project-links a:hover { text-decoration: underline; }
+
+.project-site-logo {
+  height: 16px;
+  width: auto;
+  max-width: 80px;
+  object-fit: contain;
+}
 
 /* ---------- Footer ---------- */
 

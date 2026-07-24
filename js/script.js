@@ -74,28 +74,24 @@ if (viewMoreBtn && timelineExtra) {
 // Projects carousel — edit this array to update your projects
 const projectsData = [
   {
-    title: 'Project Name',
-    description: 'Short description of what the project does and the problem it solves.',
-    tags: ['React', 'Node'],
-    code: 'https://github.com/yourusername/project-one',
-    demo: '#',
+    title: 'Tickrate',
+    description:
+      'A multi-agent AI system that turns a stock ticker into a grounded, fact-checked research memo. A Researcher and an independent Critic agent cross-check every claim against real SEC filings using retrieval-augmented search, alongside a statistical price forecast and a tracked daily up or down prediction.',
+    tags: ['Agentic AI', 'RAG', 'Python'],
+    code: 'https://github.com/pranav-darga/tickrate',
+    demo: 'https://vantage-alpha-pearl.vercel.app',
+    siteLogo: 'assets/logos/vantage-mark.svg',
+    image: 'assets/projects/tickrate-homescreen.jpg',
+    gradient: 'linear-gradient(135deg, #7e14ff, #47bfff)',
+  },
+  {
+    title: 'Vantage',
+    description:
+      "The read-only frontend for Tickrate: a watchlist summary, per-ticker research pages with full source citations, and a prediction-accuracy dashboard.",
+    tags: ['React', 'TypeScript', 'Tailwind CSS'],
+    code: 'https://github.com/pranav-darga/vantage',
+    demo: null,
     gradient: 'linear-gradient(135deg, #1456f0, #0a2540)',
-  },
-  {
-    title: 'Project Name',
-    description: 'Short description of what the project does and the problem it solves.',
-    tags: ['Python', 'ML'],
-    code: 'https://github.com/yourusername/project-two',
-    demo: '#',
-    gradient: 'linear-gradient(135deg, #f97316, #fbbf24)',
-  },
-  {
-    title: 'Project Name',
-    description: 'Short description of what the project does and the problem it solves.',
-    tags: ['Swift', 'iOS'],
-    code: 'https://github.com/yourusername/project-three',
-    demo: '#',
-    gradient: 'linear-gradient(135deg, #c084fc, #e879a0)',
   },
 ];
 
@@ -110,6 +106,7 @@ const detailDesc = document.getElementById('detail-desc');
 const detailTags = document.getElementById('detail-tags');
 const detailCode = document.getElementById('detail-code');
 const detailDemo = document.getElementById('detail-demo');
+const detailDemoLogo = document.getElementById('detail-demo-logo');
 
 if (thumbCurrent && projectsData.length) {
   const total = projectsData.length;
@@ -130,26 +127,60 @@ if (thumbCurrent && projectsData.length) {
 
   document.getElementById('count-total').textContent = total;
 
+  function applyThumb(el, project) {
+    if (project.image) {
+      el.style.backgroundImage = `url("${project.image}")`;
+      el.style.backgroundSize = 'cover';
+      el.style.backgroundPosition = 'center';
+      el.style.backgroundRepeat = 'no-repeat';
+    } else {
+      el.style.backgroundImage = project.gradient;
+      el.style.backgroundSize = '';
+      el.style.backgroundPosition = '';
+      el.style.backgroundRepeat = '';
+    }
+  }
+
   function render() {
     const prevIdx = wrap(current - 1);
     const nextIdx = wrap(current + 1);
 
-    thumbPrev.style.background = projectsData[prevIdx].gradient;
-    thumbCurrent.style.background = projectsData[current].gradient;
-    thumbNext.style.background = projectsData[nextIdx].gradient;
+    applyThumb(thumbPrev, projectsData[prevIdx]);
+    applyThumb(thumbCurrent, projectsData[current]);
+    applyThumb(thumbNext, projectsData[nextIdx]);
 
-    currentLink.href = projectsData[current].demo;
+    const project = projectsData[current];
 
-    detailTitle.textContent = projectsData[current].title;
-    detailDesc.textContent = projectsData[current].description;
+    if (project.demo) {
+      currentLink.href = project.demo;
+      currentLink.style.display = '';
+    } else {
+      currentLink.style.display = 'none';
+    }
+
+    detailTitle.textContent = project.title;
+    detailDesc.textContent = project.description;
     detailTags.innerHTML = '';
-    projectsData[current].tags.forEach((tag) => {
+    project.tags.forEach((tag) => {
       const li = document.createElement('li');
       li.textContent = tag;
       detailTags.appendChild(li);
     });
-    detailCode.href = projectsData[current].code;
-    detailDemo.href = projectsData[current].demo;
+    detailCode.href = project.code;
+
+    if (project.demo) {
+      detailDemo.href = project.demo;
+      detailDemo.style.display = '';
+      if (project.siteLogo) {
+        detailDemoLogo.src = project.siteLogo;
+        detailDemoLogo.alt = `${project.title} site logo`;
+        detailDemoLogo.style.display = '';
+      } else {
+        detailDemoLogo.style.display = 'none';
+      }
+    } else {
+      detailDemo.style.display = 'none';
+    }
 
     countCurrent.textContent = current + 1;
 

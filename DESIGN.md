@@ -174,7 +174,11 @@ The system is mostly flat, with elevation reserved for the handful of surfaces t
 ### Signature Component: Project Slider
 A three-up carousel (previous / active / next) where the active slide is large and sharp, the side slides are visually receded (150px wide, 45% opacity, brightening on hover). This is the system's most expressive component — it exists specifically to let a visitor "audition" a project's live demo inline before committing a click, reinforcing the Working Proof concept directly.
 
+Thumbnails prefer a real screenshot of the deployed product (`background-size: cover; background-position: center` over a real image) over an abstract color block — a flat gradient is the fallback only for projects with no live demo to screenshot (Vantage), never the default when a real screenshot is available. This is the Working Proof concept applied to Projects the same way company logos apply it to Experience: show the actual thing, don't describe it.
+
 Slide swaps transition `width` and `height` directly rather than `transform` — a deliberate exception to the usual transform/opacity-only motion rule. The three thumbnails share one flex row and need to reflow together as the active slide grows and its neighbors shrink; a transform-only swap would scale the boxes without the siblings making room, breaking the layout. The trade-off (layout thrash on a rare, deliberate user action) is accepted here; it should not be treated as a pattern to reuse elsewhere.
+
+Not every project has a live demo. When a project's data has no `demo` URL, the play-button overlay on the active thumbnail and the "Live Demo" link both disappear entirely (`display: none`) rather than pointing at a dead or placeholder link — only "Code" shows. When a live demo does exist and the deployed product has its own brand mark (as Tickrate's does — it ships as the Vantage frontend), that mark appears inline before the "Live Demo" text at `16px` height (`.project-site-logo`), the same real-logo-over-placeholder-text principle as the Experience section's company logos.
 
 ## 6. Do's and Don'ts
 

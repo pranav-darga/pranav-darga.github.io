@@ -105,17 +105,11 @@ h1, h2, h3, h4 { margin: 0; line-height: 1.15; }
 .hero-image {
   border-radius: var(--radius-lg);
   overflow: hidden;
-  background: var(--color-bg-alt);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 .hero-image img {
   width: 100%;
-  max-width: 626px;
   height: auto;
-  object-fit: contain;
   display: block;
 }
 
